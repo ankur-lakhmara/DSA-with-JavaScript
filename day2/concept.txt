@@ -1,0 +1,15 @@
+In the day 2 i am going to learn the simpleifying the big o expressions
+
+
+if the complexity is o(50+n) it would be express as o(n)
+if the complexity is o(n^2+ n + 50) it would be express as o(n^2)
+if the complexity is o(n + 5n + 1000n) it would be express as o(n)
+
+smaller terms dont matters in complexity expressions
+
+
+Big O shorthands :
+1. arthmatic operations are constants
+2. variables assignments are also constants 
+3. accessing elements from array on the basis of index , from object (key basis) is also constants
+4. in the loop the complexity is the length of the loop times the complexity of whatever happens inside the loop
