@@ -1,0 +1,7 @@
+time time we are going to learn the frequency counter pattern 
+where in an array we are given that 
+
+arr = [1,2,3,4]
+arr2 = [1,4,9,16]
+
+so we have to identify that the arr is consisting the elemnets into arr2 with each elemnets of arr square. order don't matters

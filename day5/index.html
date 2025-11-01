@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket System</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Header Section -->
+        <header class="app-header">
+            <!-- Notification Bar -->
+            <div id="notification" class="notification-bar hidden"></div>
+
+            <!-- Header Content -->
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="header-title">Ticket System</h1>
+                    <p class="header-subtitle">Manage and track issues efficiently</p>
+                </div>
+                <button id="newTicketBtn" class="btn btn-primary btn-lg">
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Ticket
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Left Panel - Ticket List -->
+            <aside class="ticket-list-panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">Tickets</h2>
+                    <p class="panel-count" id="ticketCount">0 total</p>
+                </div>
+                <div class="panel-content">
+                    <div id="ticketList" class="ticket-list"></div>
+                </div>
+            </aside>
+
+            <!-- Right Panel - Ticket Chat -->
+            <section class="ticket-chat-panel">
+                <div id="chatContent" class="chat-content">
+                    <!-- Empty state -->
+                    <div class="empty-state">
+                        <svg class="empty-state-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <h3 class="empty-state-title">No ticket selected</h3>
+                        <p class="empty-state-text">Select a ticket from the list to view its details and chat history</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Create Ticket Modal -->
+    <div id="ticketModal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Create New Ticket</h2>
+                <button id="closeModalBtn" class="btn-close">
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <form id="ticketForm" class="modal-form">
+                <!-- Ticket Name -->
+                <div class="form-group">
+                    <label for="ticketName" class="form-label">Ticket Name *</label>
+                    <input 
+                        type="text" 
+                        id="ticketName" 
+                        class="form-input" 
+                        placeholder="e.g., Login page not loading"
+                        required
+                    >
+                </div>
+
+                <!-- Summary -->
+                <div class="form-group">
+                    <label for="ticketSummary" class="form-label">Summary *</label>
+                    <textarea 
+                        id="ticketSummary" 
+                        class="form-textarea" 
+                        placeholder="Describe the issue or feature request..."
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Users Selection -->
+                <div class="form-group">
+                    <label class="form-label">Assign Users</label>
+                    <div id="usersList" class="users-list"></div>
+                </div>
+
+                <!-- Error Message -->
+                <div id="formError" class="form-error hidden"></div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Ticket</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
