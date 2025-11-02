@@ -11,10 +11,10 @@ let arr2 = [1,4,9,16,25,25];
     let freq2 = {};
 
     for(let i = 0;i<arr1.length;i++){
-        freq1[i] = (freq1[i] || 0)+1;
+        freq1[arr1[i]] = (freq1[arr1[i]] || 0)+1;
     }
     for(let i = 0;i<arr2.length;i++){
-        freq2[i] = (freq2[i] ||0)+1;
+        freq2[arr2[i]] = (freq2[arr2[i]] ||0)+1;
     }
 
 
