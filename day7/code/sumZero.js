@@ -1,3 +1,6 @@
+//in this problem we have to find out the pair where the given array is sorted so you have to find out the pair whose sum is 0
+//-----------------------------------------------------------------------------------------------------------------------------
+
 //brute force approach with n^2 time complexity
 let arr = [-9,-2,-1,0,1,2,3,4,5];
 // console.log(arr.sort());
@@ -14,7 +17,7 @@ for(let i = 0;i<arr.length;i++){
 console.log('pair not found ');
 return;
 
-//optimized approach with two pointer 
+//optimized approach with two pointer (O(n) time complexity and O(1) space complexity)
 
 let left = 0;
 let right  = arr.length-1;

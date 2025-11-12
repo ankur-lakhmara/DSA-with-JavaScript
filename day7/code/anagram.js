@@ -1,3 +1,5 @@
+//this problem states that check the both strings have equal numbe of charecters with same count 
+
 let str1 = 'AABDD';
 let str2 = 'BACAA';
 

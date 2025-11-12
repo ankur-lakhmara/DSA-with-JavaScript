@@ -1,0 +1,3 @@
+today i will be learning the big O where in the rule 3 i studied .. that if the function have different inputs then the big O will not o(n) it will be 
+
+if a function have inout a, b then the big o will be o(a+b)
