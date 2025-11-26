@@ -1,5 +1,7 @@
 // https://leetcode.com/discuss/post/372434/amazon-oa-2019-two-sum-unique-pairs-by-s-sm3s/
 
+
+/*in this problem i have to return the unique pairs with given targhet sum  */
 const nums = [1, 1, 2,90, 45, 46, 46];
 
 const target = 47;
